@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chá de Cozinha - Victoria & Maycon</title>
+
+  <!-- Pré-visualização ao enviar o link no WhatsApp -->
+  <meta property="og:title" content="Chá de Cozinha - Victoria & Maycon">
+  <meta property="og:description" content="05 de Dezembro de 2026 às 16h • Confirme sua presença e escolha seu presente!">
+  <meta property="og:image" content="img/Fundo.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cartão Principal do Convite (Fiel ao Design) -->
+  <main class="convite-wrapper">
+    <section class="convite-card">
+      
+      <!-- Bule no canto superior esquerdo -->
+      <img src="img/Bule.png" alt="" class="enfeite-bule" aria-hidden="true">
+
+      <!-- Arabesco Dourado Superior -->
+      <svg class="arabesco-topo" viewBox="0 0 500 45" preserveAspectRatio="none">
+        <path d="M 10,35 C 60,35 80,5 110,5 C 130,5 130,30 115,30 C 100,30 105,10 150,15 C 200,20 220,38 250,38 C 280,38 300,20 350,15 C 395,10 400,30 385,30 C 370,30 370,5 390,5 C 420,5 440,35 490,35" 
+              fill="none" stroke="#E0A948" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+
+      <header class="cabecalho-convite">
+        <p class="titulo-evento">CHÁ DE<br>COZINHA</p>
+        <h1 class="nomes-casal">
+          Victoria <span class="e-comercial">&amp;</span><br>Maycon
+        </h1>
+        <p class="frase-convite">Venha comemorar conosco<br>essa nova etapa!</p>
+      </header>
+
+      <div class="info-data">
+        <div class="coluna-lateral">
+          <span>sábado</span>
+          <span>às 16h</span>
+        </div>
+        <div class="coluna-dia">05</div>
+        <div class="coluna-lateral">
+          <span>dezembro</span>
+          <span>2026</span>
+        </div>
+      </div>
+
+      <footer class="rodape-convite">
+        <p class="endereco">[Endereço]</p>
+        <a href="#secao-presentes" class="link-acao">confirme a sua presença e escolha seu presente</a>
+      </footer>
+
+      <!-- Arabesco Dourado Inferior -->
+      <svg class="arabesco-base" viewBox="0 0 500 45" preserveAspectRatio="none">
+        <path d="M 10,10 C 60,10 80,40 110,40 C 130,40 130,15 115,15 C 100,15 105,35 150,30 C 200,25 220,7 250,7 C 280,7 300,25 350,30 C 395,35 400,15 385,15 C 370,15 370,40 390,40 C 420,40 440,10 490,10" 
+              fill="none" stroke="#E0A948" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+
+      <!-- Xícara no canto inferior direito -->
+      <img src="img/Xicara.png" alt="" class="enfeite-xicara" aria-hidden="true">
+
+    </section>
+
+    <!-- Seção da Lista de Presentes -->
+    <section id="secao-presentes" class="lista-card">
+      <h2>Lista de Presentes</h2>
+      <p class="descricao-lista">
+        Selecione abaixo o item que deseja nos presentear. Assim que confirmado, ele ficará bloqueado para os outros convidados.
+      </p>
+
+      <div id="grid-presentes" class="grid-presentes">
+        <p class="carregando">Carregando lista de presentes...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Confirmação -->
+  <div id="modal-reserva" class="modal-overlay">
+    <div class="modal-box">
+      <h3 id="modal-nome-presente">Nome do Presente</h3>
+      <p>Digite seu nome para reservar este item:</p>
+      <input type="text" id="input-nome-convidado" placeholder="Ex: Ana Paula Silva" autocomplete="name">
+      <div class="modal-botoes">
+        <button type="button" id="btn-cancelar" class="btn-secundario">Cancelar</button>
+        <button type="button" id="btn-confirmar" class="btn-primario">Confirmar Escolha</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
