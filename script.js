@@ -1,13 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { 
-  getFirestore, 
-  collection, 
-  onSnapshot, 
-  doc, 
-  runTransaction, 
+import {
+  getFirestore,
+  collection,
+  onSnapshot,
+  doc,
+  runTransaction,
   addDoc,
   query,
-  orderBy
+  orderBy,
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 // 1. SUBSTITUA PELAS SUAS CREDENCIAIS DO FIREBASE
@@ -18,7 +18,7 @@ const firebaseConfig = {
   storageBucket: "presentes-be34a.firebasestorage.app",
   messagingSenderId: "146306429044",
   appId: "1:146306429044:web:db3316a71e70fad6566121",
-  measurementId: "G-WK3ZJCM403"
+  measurementId: "G-WK3ZJCM403",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -60,7 +60,9 @@ onSnapshot(consultaOrdenada, (snapshot) => {
     const botao = document.createElement("button");
     botao.className = "btn-escolher";
     botao.disabled = dados.reservado;
-    botao.textContent = dados.reservado ? "Já escolhido ✓" : "Escolher presente";
+    botao.textContent = dados.reservado
+      ? "Já escolhido ✓"
+      : "Escolher presente";
 
     if (!dados.reservado) {
       botao.addEventListener("click", () => abrirModal(id, dados.nome));
@@ -122,12 +124,14 @@ btnConfirmar.addEventListener("click", async () => {
       transaction.update(docRef, {
         reservado: true,
         convidado: nomeConvidado,
-        dataReserva: new Date().toISOString()
+        dataReserva: new Date().toISOString(),
       });
     });
 
     fecharModal();
-    alert(`Obrigada, ${nomeConvidado}! Seu presente foi reservado com sucesso.`);
+    alert(
+      `Obrigada, ${nomeConvidado}! Seu presente foi reservado com sucesso.`,
+    );
   } catch (erro) {
     alert(erro);
     fecharModal();
@@ -141,20 +145,34 @@ btnConfirmar.addEventListener("click", async () => {
 window.cadastrarListaInicial = async () => {
   const itens = [
     "Jogo de Panelas Antiaderente",
-    "Liquidificador",
-    "Conjunto de Potes Herméticos",
+    "Peneira",
+    "Lixeira de Cozinha",
     "Escorredor de Louça",
-    "Jogo de Facas",
-    "Cafeteira Elétrica",
-    "Conjunto de Assadeiras",
-    "Jogo de Copos (6 unidades)"
+    "Lixeira de Banheiro",
+    "Prendedor de Roupa",
+    "Pano de Prato",
+    "Jogo de Copos (6 unidades)",
+    "Cesto de Roupa",
+    "Tábua de Carne",
+    "Pano de Prato",
+    "Jarra de Suco",
+    "Coador de Café",
+    "Garrafa Térmica",
+    "Varal de Roupa íntima",
+    "Toalha de Mesa Pequena",
+    "Tupperware",
+    "Jogo de Faca",
+    "Organizador de Talheres",
+    "Liquidificador",
+    "Jogo de Tapete",
+    "Fruteira"
   ];
 
   for (const nome of itens) {
     await addDoc(presentesRef, {
       nome: nome,
       reservado: false,
-      convidado: ""
+      convidado: "",
     });
   }
   alert("Lista cadastrada com sucesso!");
