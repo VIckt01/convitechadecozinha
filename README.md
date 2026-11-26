@@ -46,7 +46,7 @@ convite-cha-de-cozinha/
 ### 1. Clonar ou baixar o projeto
 Faça um fork deste repositório ou baixe os arquivos para o seu computador:
 ```bash
-git clone https://github.com/SEU-USUARIO/convite-cha-de-cozinha.git
+git clone https://github.com/VIckt01/convite-cha-de-cozinha.git
 ```
 
 ### 2. Configurar o Banco de Dados no Firebase
