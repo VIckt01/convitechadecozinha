@@ -12,13 +12,12 @@ import {
 
 // 1. SUBSTITUA PELAS SUAS CREDENCIAIS DO FIREBASE
 const firebaseConfig = {
-  apiKey: "AIzaSyAF6mvb3j-dUL1CPeC9TzAco_H56eXgwwM",
-  authDomain: "presentes-be34a.firebaseapp.com",
-  projectId: "presentes-be34a",
-  storageBucket: "presentes-be34a.firebasestorage.app",
-  messagingSenderId: "146306429044",
-  appId: "1:146306429044:web:db3316a71e70fad6566121",
-  measurementId: "G-WK3ZJCM403",
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_PROJETO.firebaseapp.com",
+  projectId: "SEU_PROJETO",
+  storageBucket: "SEU_PROJETO.appspot.com",
+  messagingSenderId: "SEU_SENDER_ID",
+  appId: "SEU_APP_ID",
 };
 
 const app = initializeApp(firebaseConfig);
